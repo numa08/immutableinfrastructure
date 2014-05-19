@@ -1,0 +1,209 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <title>ImmutableInfrastructure</title>
+        <link type="text/css" rel="stylesheet" href="assets/css/show.css" />
+        <link type="text/css" rel="stylesheet" href="assets/css/prettify.css" />
+        <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/show.js"></script>
+        <script type="text/javascript" src="assets/js/prettify/prettify.js"></script>
+        <script type="text/javascript" src="assets/js/prettify/lang-apollo.js"></script><script type="text/javascript" src="assets/js/prettify/lang-css.js"></script><script type="text/javascript" src="assets/js/prettify/lang-hs.js"></script><script type="text/javascript" src="assets/js/prettify/lang-lisp.js"></script><script type="text/javascript" src="assets/js/prettify/lang-lua.js"></script><script type="text/javascript" src="assets/js/prettify/lang-ml.js"></script><script type="text/javascript" src="assets/js/prettify/lang-proto.js"></script><script type="text/javascript" src="assets/js/prettify/lang-scala.js"></script><script type="text/javascript" src="assets/js/prettify/lang-sql.js"></script><script type="text/javascript" src="assets/js/prettify/lang-sql.js"></script><script type="text/javascript" src="assets/js/prettify/lang-vb.js"></script><script type="text/javascript" src="assets/js/prettify/lang-vhdl.js"></script><script type="text/javascript" src="assets/js/prettify/lang-wiki.js"></script><script type="text/javascript" src="assets/js/prettify/lang-yaml.js"></script><link type="text/css" rel="stylesheet" href="css/custom.css?1400510654494" />
+      <script type="text/javascript"><!--
+        window.onload=function() { prettyPrint(); };
+      --></script>
+      </head>
+      <body>
+        <div id="slides">
+          <div id="reel">
+            <div class="content" id="slide-0"><div class="container">
+                  <h1 id="Immutable+Infrastructure+%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E3%81%A6%E3%81%BF%E3%81%9F">Immutable Infrastructure をまとめてみた</h1><h2 id=""><a  href="https://twitter.com/numa08">@numa08</a></h2>
+                </div>
+      </div><div class="content" id="slide-1"><div class="container">
+                  <h2 id="%E3%81%8A%E5%93%81%E6%9B%B8%E3%81%8D">お品書き</h2><ul><li>Immutable Infrastructure とは
+</li><li>関連するツールのまとめ
+</li><li>Dockerの利用例</li></ul>
+                </div>
+      </div><div class="content" id="slide-2"><div class="container">
+                  <h2 id="Immutable+Infrastructure%E3%81%A8%E3%81%AF%EF%BC%9F">Immutable Infrastructureとは？</h2><ul><li>一度作った環境にアップデートを加える事はしない
+</li><li>バージョンアップの際には、環境ごと再構築する
+</li></ul>
+                </div>
+      </div><div class="content" id="slide-3"><div class="container">
+                  <h2 id="%E4%BD%95%E3%81%8C%E3%81%86%E3%82%8C%E3%81%97%E3%81%84%E3%81%AE%EF%BC%9F">何がうれしいの？</h2><ul><li><p>確実に動作する環境を用意し続けることができる
+</p><ul><li>デプロイされるのは運用されている物のみ
+</li></ul></li><li><p>バグの分析に役立つ
+</p><ul><li>バグった瞬間を保存できるので、環境の再現が楽
+</li></ul></li><li><p>連携するツールが多いのでお手軽に作れる
+</p><ul><li>Chef
+</li><li>Docker
+</li><li>あとで紹介します
+</li></ul></li></ul>
+                </div>
+      </div><div class="content" id="slide-4"><div class="container">
+                  <h2 id="%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E4%BD%BF%E3%81%84%E3%81%9D%E3%81%86">リソース使いそう</h2><ul><li><p>環境構築の「時間リソース」は、ベースになる環境を持っておくことで軽減できる
+</p><ul><li>AWSのAMIとか
+</li><li>DockerならContainer
+</li><li>VagrantならBox
+</li></ul></li></ul>
+                </div>
+      </div><div class="content" id="slide-5"><div class="container">
+                  <h2 id="%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E4%BD%BF%E3%81%84%E3%81%9D%E3%81%86">リソース使いそう</h2><ul><li><p>ハードディスクなどの「容量リソース」は、ムーアの法則で
+</p><ul><li>利用しない環境は即刻削除
+</li><li>あるいは世代管理をする
+</li></ul></li></ul>
+                </div>
+      </div><div class="content" id="slide-6"><div class="container">
+                  <h2 id="%E5%AE%9F%E7%8F%BE%E6%96%B9%E6%B3%95">実現方法</h2><ul><li><a  href="http://www.getchef.com/chef/">Chef</a>
+</li><li><a  href="https://www.docker.io/">Docker</a>
+</li><li><a  href="http://www.vagrantup.com/">Vagrant</a>
+</li></ul><p>詳細は次のスライドで</p>
+                </div>
+      </div><div class="content" id="slide-7"><div class="container">
+                  <h2 id="%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">ツールについて</h2><ul><li><a  href="http://www.getchef.com/chef/">Chef</a>
+</li><li><a  href="https://www.docker.io/">Docker</a>
+</li><li><a  href="http://www.vagrantup.com/">Vagrant</a>
+</li></ul>
+                </div>
+      </div><div class="content" id="slide-8"><div class="container">
+                  <h2 id="%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">ツールについて</h2><ul><li>わりとそれぞれのツールを勘違いしているケースがあるっぽい（俺調べ）
+</li><li>全く違う目的のためのツールなので、注意をする
+</li><li>割と俺の運用経験に基きます
+</li></ul>
+                </div>
+      </div><div class="content" id="slide-9"><div class="container">
+                  <h2 id="Chef">Chef</h2><ul><li>構成管理ツールと呼ばれます
+</li><li>何もない状況から、サービスが動作する環境を作ります
+</li><li>冪等性に充填を起きます
+</li><li>マルチプラットフォームでの動作をサポートします
+</li></ul>
+                </div>
+      </div><div class="content" id="slide-10"><div class="container">
+                  <h2 id="Chaf+%E5%8B%95%E4%BD%9C%E3%81%AE%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8">Chaf 動作のイメージ</h2><ul><li>Recipeと呼ばれるコード（RubyのDSL)に環境構築の手順を記述します
+</li><li>Chef-serverを利用して複数のクライアントに一気に環境を作ります
+</li><li>あるいは、Chef-soloを使って特定のクライアントに環境を作ります
+</li></ul>
+                </div>
+      </div><div class="content" id="slide-11"><div class="container">
+                  <h2 id="Chef+%E5%8B%95%E4%BD%9C%E3%81%AE%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8">Chef 動作のイメージ</h2><ul><li>マルチプラットフォーム対応なので、xXnix,OSX,Windowsで同じ環境を作ることができます
+</li></ul>
+                </div>
+      </div><div class="content" id="slide-12"><div class="container">
+                  <h2 id="Chef+%E5%86%AA%E7%AD%89%E6%80%A7">Chef 冪等性</h2><ul><li>何度実行しても同じ物が得られること
+</li><li>アップデート、再配置はできない、しない
+</li></ul>
+                </div>
+      </div><div class="content" id="slide-13"><div class="container">
+                  <h2 id="Chef+%E3%81%BE%E3%81%A8%E3%82%81">Chef まとめ</h2><ul><li>環境構築に使う
+</li><li>アプリケーションのデプロイには機能が多すぎる
+</li></ul>
+                </div>
+      </div><div class="content" id="slide-14"><div class="container">
+                  <h2 id="Docker">Docker</h2><ul><li>仮想化技術の一つ
+</li><li>VirtualBox,VMWareなどとは異なる仮想化手法
+</li></ul>
+                </div>
+      </div><div class="content" id="slide-15"><div class="container">
+                  <h2 id="%E4%BB%AE%E6%83%B3%E5%8C%96%E6%8A%80%E8%A1%93%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">仮想化技術について</h2><ul><li><p>VirtualBox, VMWare
+</p><ul><li>CPUのもつ仮想化支援技術に依存する
+</li></ul></li><li><p>Docker
+</p><ul><li>OSのもつ仮想化技術に依存する
+</li></ul></li></ul>
+                </div>
+      </div><div class="content" id="slide-16"><div class="container">
+                  <h2 id="Docker+%E5%8B%95%E4%BD%9C%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8">Docker 動作イメージ</h2><ul><li>事前にベースになるImageを作っておく
+</li><li>アプリケーションをデプロイした状態のImageをcommitする
+</li><li>仮想マシンを実行する
+</li></ul>
+                </div>
+      </div><div class="content" id="slide-17"><div class="container">
+                  <h2 id="Docker+%E5%8B%95%E4%BD%9C%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8">Docker 動作イメージ</h2><ul><li>アプリケーションデプロイのタイミングでImageを破棄する
+</li><li>新しいImageにアップデートしたアプリケーションをデプロイする
+</li><li>よって、固有データを残すことはできない
+</li><li>データベースは別のホストへ
+</li></ul>
+                </div>
+      </div><div class="content" id="slide-18"><div class="container">
+                  <h2 id="Docker+%E3%81%BE%E3%81%A8%E3%82%81">Docker まとめ</h2><ul><li>アプリケーションのデプロイにも使える
+</li><li>環境構築するには、パワフルではない
+</li><li>Chefと組み合わせると幸せになれるかも
+</li></ul>
+                </div>
+      </div><div class="content" id="slide-19"><div class="container">
+                  <h2 id="Vagrant">Vagrant</h2><ul><li>環境構築ツールではない
+</li><li>仮想化技術ではない
+</li><li>仮想化ソフトウェアのためのインターフェース
+</li></ul>
+                </div>
+      </div><div class="content" id="slide-20"><div class="container">
+                  <h2 id="Vagrant+%E5%8B%95%E4%BD%9C%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8">Vagrant 動作イメージ</h2><ul><li>VirtualBox,VMWare,Dockerで仮想マシンを作って動かす
+</li><li>Chefを使って仮想マシンの環境を作る
+</li><li>その辺りの設定をVagrantfileに書く
+</li></ul>
+                </div>
+      </div><div class="content" id="slide-21"><div class="container">
+                  <h2 id="Vagrant+%E3%81%BE%E3%81%A8%E3%82%81">Vagrant まとめ</h2><ul><li>仮想マシンを作りまくるツール
+</li><li>試験環境、開発環境の共有に使える
+</li></ul>
+                </div>
+      </div><div class="content" id="slide-22"><div class="container">
+                  <h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2><ul><li><p>Chef
+</p><ul><li>環境構築に使う
+</li><li>作った環境にアプリケーションのデプロイとかをやる
+</li></ul></li><li><p>Docker
+</p><ul><li>アプリケーションのデプロイに使う
+</li><li>作った環境には手を加えない
+</li></ul></li></ul>
+                </div>
+      </div><div class="content" id="slide-23"><div class="container">
+                  <ul><li><p>Vagrant
+</p><ul><li>仮想環境を操作するのに使う
+</li><li>試験、開発環境の共有に便利</li></ul></li></ul>
+                </div>
+      </div><div class="content" id="slide-24"><div class="container">
+                  <h2 id="Docker%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F">Dockerを使ってみた</h2>
+                </div>
+      </div><div class="content" id="slide-25"><div class="container">
+                  <p><img alt=""  src="docker/deploy.png" />
+</p>
+                </div>
+      </div><div class="content" id="slide-26"><div class="container">
+                  <ol><li>開発
+</li><li>リポジトリにcommit,push
+</li><li>Jenkinsでビルド、テスト
+</li><li>JenkinsでDockerのimageを作成
+</li><li>imageをtar.gzで出力
+</li><li>本番用ホストで実行
+</li></ol>
+                </div>
+      </div><div class="content" id="slide-27"><div class="container">
+                  <p><img alt=""  src="docker/run.png" />
+</p>
+                </div>
+      </div><div class="content" id="slide-28"><div class="container">
+                  <ul><li>DNSやLoad Balancerで参照する仮想マシン（プロセス）を変更する
+</li><li>アップデートで、新しい仮想マシンを立ち上げて、古いのは殺す
+</li><li>DNS,Load Balancerの設定を変更する
+</li></ul>
+                </div>
+      </div><div class="content" id="slide-29"><div class="container">
+                  <h2 id="%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88">メリット</h2><ul><li><p>一つのホストでロードバランシングの完結ができる
+</p><ul><li>VPSのレンタル代削減
+</li></ul></li><li>環境構築がお手軽になる
+</li></ul>
+                </div>
+      </div><div class="content" id="slide-30"><div class="container">
+                  <h2 id="%E3%83%87%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88">デメリット</h2><ul><li><p>動作中の仮想マシンに手出しはできない
+</p><ul><li>バグ発生→対応、デプロイまでを高速化する必要がある
+</li></ul></li><li><p>死んでいった仮想マシンが溜まっていく
+</p><ul><li>cronとかで削除をするべし
+</li></ul></li></ul>
+                </div>
+      </div><div class="content" id="slide-31"><div class="container">
+                  <p>Dockerを使って、強制的にメンテ、デプロイの高品質な高速化を目指しましょう</p>
+                </div>
+      </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="js/custom.js?1400510655047"></script>
+      </body>
+    </html>

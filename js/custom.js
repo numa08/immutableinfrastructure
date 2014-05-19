@@ -20,16 +20,7 @@ $(function(){
 		var hashtag = $("<ul>")
 		.append($("<li>",{
 			"class" : "hashtag"
-		})
-		.append($("<img>", {
-			"src"	: "https://g.twimg.com/Twitter_logo_blue.png",
-			"class" : "logo"
-		}))
-		.append($("<a>", {
-			text : "#新宿Scala座",
-			target : "_blank",
-			href : "https://twitter.com/intent/tweet?text=Scala%20on%20Android&hashtags=新宿Scala座&url=" + encodeURIComponent(window.location.origin  +window.location.pathname)
-		})));
+		}));
 
 		var footer = $("<div>", {
 			"class" : "footer",
@@ -45,8 +36,8 @@ $(function(){
 			"class" : "left"
 		}).append($("<a>", {
 			"class" : "topbar_link",
-			text : "Scala on Android",
-			href : "http://scala.numa08.net"
+			text : "Immutable Infrastructure",
+			href : "http://numa08.net"
 		}));
 		var eventTitle = $("<a>", {
 			"class" : "topbar_link right",
@@ -55,9 +46,7 @@ $(function(){
 		});
 		var topbar = $("<div>", {
 			"class" : "topbar"
-		}).append(slideTitle)
-		.append(eventTitle);
-
+		}).append(slideTitle);
 		return topbar;
 	}());
 });

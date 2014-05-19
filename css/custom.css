@@ -22,7 +22,7 @@ h2 {
 	padding-right: 24px;
 	font-size: 16px;
 	overflow: visible;
-	background-color: #f3f3f3;
+	background-color: #ff5100;
 	border-bottom: 1px solid #ccc;
 	text-align: right;
 }
@@ -34,8 +34,8 @@ h2 {
 }
 
 a.topbar_link {
-	color: #333333;
-	text-shadow: -1px -1px 0px #fff;
+	color: #ffffff;
+	text-shadow: -1px -1px 0px #000;
 }
 
 a.topbar_link:hover {

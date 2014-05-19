@@ -1,6 +1,9 @@
 {
   "title": "ImmutableInfrastructure",
   "sections": [
-    "hello"
+    "introduction",
+    "what",
+    "tools",
+    "docker"
   ]
 }
